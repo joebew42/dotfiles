@@ -101,8 +101,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Solarized theme from
-# https://github.com/tobiaszwaszak/i3wm/blob/master/config
+# Spacegray-ocean theme
 client.focused          #2b303b #353c47 #DCA432 #268bd2
 client.focused_inactive #2b303b #2b303b #65737e #073642
 client.unfocused        #2b303b #2b303b #65737e #073642
