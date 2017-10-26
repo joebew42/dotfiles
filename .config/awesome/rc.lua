@@ -411,7 +411,7 @@ globalkeys = awful.util.table.join(
     -- Default
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
+              {description = "show the menubar", group = "launcher"})
     -- dmenu
     -- awful.key({ modkey }, "d", function ()
     --     awful.spawn(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
@@ -423,15 +423,15 @@ globalkeys = awful.util.table.join(
     --           {description = "run prompt", group = "launcher"}),
     -- Run Lua Code
     -- awful.key({ modkey }, "x",
-    --           function ()
-    --               awful.prompt.run {
-    --                 prompt       = "Run Lua code: ",
-    --                 textbox      = awful.screen.focused().mypromptbox.widget,
-    --                 exe_callback = awful.util.eval,
-    --                 history_path = awful.util.get_cache_dir() .. "/history_eval"
-    --               }
-    --           end,
-    --           {description = "lua execute prompt", group = "awesome"})
+    --    function ()
+    --       awful.prompt.run {
+    --          prompt       = "Run Lua code: ",
+    --          textbox      = awful.screen.focused().mypromptbox.widget,
+    --          exe_callback = awful.util.eval,
+    --          history_path = awful.util.get_cache_dir() .. "/history_eval"
+    --       }
+    --    end,
+    --    {description = "lua execute prompt", group = "awesome"})
     --]]
 )
 
