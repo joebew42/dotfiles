@@ -15,17 +15,17 @@ local os    = { getenv = os.getenv, setlocale = os.setlocale }
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "xos4 Terminus 8"
-theme.menu_bg_normal                            = "#000000"
-theme.menu_bg_focus                             = "#000000"
-theme.bg_normal                                 = "#000000"
-theme.bg_focus                                  = "#000000"
-theme.bg_urgent                                 = "#000000"
+theme.font                                      = "xos4 Inconsolata 10"
+theme.menu_bg_normal                            = "#2b303b"
+theme.menu_bg_focus                             = "#2b303b"
+theme.bg_normal                                 = "#2b303b"
+theme.bg_focus                                  = "#2b303b"
+theme.bg_urgent                                 = "#2b303b"
 theme.fg_normal                                 = "#aaaaaa"
-theme.fg_focus                                  = "#ff8c00"
+theme.fg_focus                                  = "#DCA432"
 theme.fg_urgent                                 = "#af1d18"
 theme.fg_minimize                               = "#ffffff"
-theme.border_width                              = 1
+theme.border_width                              = 0
 theme.border_normal                             = "#1c2022"
 theme.border_focus                              = "#606060"
 theme.border_marked                             = "#3ca4d8"
@@ -34,8 +34,8 @@ theme.menu_width                                = 130
 theme.menu_submenu_icon                         = theme.confdir .. "/icons/submenu.png"
 theme.menu_fg_normal                            = "#aaaaaa"
 theme.menu_fg_focus                             = "#ff8c00"
-theme.menu_bg_normal                            = "#050505dd"
-theme.menu_bg_focus                             = "#050505dd"
+theme.menu_bg_normal                            = "#2b303bdd"
+theme.menu_bg_focus                             = "#2b303bdd"
 theme.widget_temp                               = theme.confdir .. "/icons/temp.png"
 theme.widget_uptime                             = theme.confdir .. "/icons/ac.png"
 theme.widget_cpu                                = theme.confdir .. "/icons/cpu.png"
@@ -290,7 +290,7 @@ function theme.at_screen_connect(s)
             --s.mylayoutbox,
             s.mytaglist,
             s.mypromptbox,
-            mpdicon,
+            --mpdicon,
             theme.mpd.widget,
         },
         --s.mytasklist, -- Middle widget
