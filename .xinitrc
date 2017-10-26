@@ -15,7 +15,4 @@ xset -dpms &
 xset s noblank &
 xset s off &
 
-# Mouse
-xinput --set-prop 'SynPS/2 Synaptics TouchPad' 'Device Accel Constant Deceleration' 5
-
-exec dbus-launch --exit-with-session i3
+exec awesome

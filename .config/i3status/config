@@ -26,7 +26,6 @@ battery 0 {
         integer_battery_capacity = true
         threshold_type = "percentage"
         low_threshold = 20
-        path = "/sys/class/power_supply/BAT1/uevent"
 }
 
 tztime local {

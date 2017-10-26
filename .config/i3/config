@@ -125,7 +125,6 @@ new_window pixel 2
 hide_edge_borders smart
 focus_follows_mouse no
 
-exec "feh --bg-center images/wallpapers/xpvalues.png"
 exec redshift
 exec "pulseaudio --start"
 exec pasystray
