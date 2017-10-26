@@ -1,0 +1,10 @@
+[user]
+	email = joebew42@gmail.com
+	name = JoeBew42
+[alias]
+	s = status
+        d = diff
+        dc = diff --cached
+        a = add .
+        cm = commit -m
+        pr = pull --rebase
