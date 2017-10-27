@@ -217,10 +217,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description = "show help", group="awesome"}),
     -- Tag browsing
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    --           {description = "view previous", group = "tag"}),
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    --           {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
@@ -231,13 +231,13 @@ globalkeys = awful.util.table.join(
     --           {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
-    awful.key({ altkey,           }, "j",
+    awful.key({ modkey,           }, "Right",
         function ()
-            awful.client.focus.byidx( 1)
+            awful.client.focus.byidx(1)
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ altkey,           }, "k",
+    awful.key({ modkey,           }, "Left",
         function ()
             awful.client.focus.byidx(-1)
         end,
@@ -368,6 +368,14 @@ globalkeys = awful.util.table.join(
     --           {description = "show filesystem", group = "widgets"}),
     -- awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end,
     --           {description = "show weather", group = "widgets"}),
+
+    -- Lock screen
+    awful.key({ modkey, "Control" }, "l",
+        function ()
+            os.execute(string.format("i3lock -c 000000"))
+            beautiful.volume.update()
+        end,
+        {description = "lock screen", group = "hotkeys"}),
 
     -- Brightness
     awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 10") end,
