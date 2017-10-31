@@ -15,4 +15,6 @@ xset -dpms &
 xset s noblank &
 xset s off &
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 exec awesome
