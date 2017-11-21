@@ -6,8 +6,8 @@ Xcursor.theme: Vanilla-DMZ
 
 Xft.dpi:        96
 Xft.antialias:  true
+Xft.hinting:    true
 Xft.rgba:       rgb
-Xft.hinting:    false
 Xft.hintstyle:  hintslight
 
 urxvt*font:        xft:Inconsolata:style:pixelsize=22
