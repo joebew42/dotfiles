@@ -84,6 +84,8 @@ bindsym $mod+Shift+minus move scratchpad
 
 bindsym $mod+minus scratchpad show
 
+bindsym --release $mod+Shift+s exec --no-startup-id import ~/Pictures/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
+
 mode "resize" {
         bindsym j resize shrink width 1 px or 1 ppt
         bindsym k resize grow height 1 px or 1 ppt
