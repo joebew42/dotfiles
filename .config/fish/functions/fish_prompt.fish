@@ -9,7 +9,13 @@ function fish_prompt
     end
   end
   function _git_branch_name
-    echo -n (set_color yellow)(git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+    set branch_name (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+    test $branch_name
+    and if [ (string length $branch_name) -gt 12 ]
+       echo -n (set_color yellow)(echo $branch_name | cut -c -12)...
+    else
+       echo -n (set_color yellow)$branch_name
+    end
   end
   function _git_is_dirty
     echo -n (git status -s --ignore-submodules=dirty ^/dev/null)
@@ -23,7 +29,7 @@ function fish_prompt
   end
   function _git_info
     if [ (_git_branch_name) ]
-      echo -n "$git_info"(_git_branch_name)' '(_git_status)' '
+      echo -n (_git_branch_name)' '(_git_status)' '
     end
   end
   function _prompt_start
