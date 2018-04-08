@@ -17,7 +17,7 @@
     allow_bold = False
     background_color = "#2b303b"
     cursor_color = "#7b7b7b"
-    font = Source Code Pro Medium 18
+    font = Monaco 16
     foreground_color = "#839496"
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     scrollbar_position = hidden
