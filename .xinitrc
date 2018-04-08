@@ -17,4 +17,9 @@ xset s off &
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-exec awesome
+# Nvidia
+# xrandr --setprovideroutputsource modesetting NVIDIA-0
+# xrandr --auto
+# xrandr --dpi 96
+
+exec dbus-launch --exit-with-session i3
