@@ -1,4 +1,5 @@
 [global_config]
+  tab_position = bottom
   title_receive_fg_color = "#d4d4d4"
   title_transmit_bg_color = "#1fa3ff"
   title_transmit_fg_color = "#d4d4d4"
