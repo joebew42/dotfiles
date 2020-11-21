@@ -115,6 +115,6 @@ focus_follows_mouse no
 
 # exec redshift
 # exec "pulseaudio --start"
-# exec pasystray
+exec pasystray
 
 exec_always --no-startup-id ~/.i3/polybar.sh &
