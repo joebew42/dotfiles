@@ -12,7 +12,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec "rofi -combi-modi window,drun,ssh -font "inconsolata 14" -show combi -show-icons"
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
