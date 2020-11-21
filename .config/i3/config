@@ -109,24 +109,12 @@ client.focused_inactive #2b303b #2b303b #65737e #073642
 client.unfocused        #2b303b #2b303b #65737e #073642
 client.urgent           #2b303b #bf616a #fdf6e3 #002b36
 
-bar {
-        position        top
-        status_command  i3status
-        colors {
-               background #2b303b
-               statusline #839496
-               separator  #586e75
-               active_workspace   #2b303b #2b303b #65737e
-               focused_workspace  #353c47 #353c47 #DCA432
-               inactive_workspace #2b303b #2b303b #65737e
-               urgent_workspace   #bf616a #bf616a #fdf6e3
-        }
-}
-
 new_window pixel 2
 hide_edge_borders smart
 focus_follows_mouse no
 
-exec redshift
-exec "pulseaudio --start"
-exec pasystray
+# exec redshift
+# exec "pulseaudio --start"
+# exec pasystray
+
+exec_always --no-startup-id ~/.i3/polybar.sh &
