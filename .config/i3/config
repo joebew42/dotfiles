@@ -12,7 +12,7 @@ bindsym $mod+Return exec kitty
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec "rofi -combi-modi window,drun,ssh -font 'inconsolata 14' -show combi -show-icons"
+bindsym $mod+space exec "rofi -combi-modi window,drun,ssh -font 'inconsolata 14' -show combi -show-icons"
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -45,7 +45,7 @@ bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+f focus mode_toggle
 
 bindsym $mod+a focus parent
 
