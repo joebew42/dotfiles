@@ -1,6 +1,6 @@
 [user]
 	email = joebew42@gmail.com
-	name = JoeBew42
+	name = Joe Bew
 [alias]
 	s = status --short
         d = diff
@@ -8,3 +8,5 @@
         a = add .
         cm = commit -m
         pr = pull --rebase
+[core]
+	editor = vim
