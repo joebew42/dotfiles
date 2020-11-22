@@ -117,5 +117,5 @@ focus_follows_mouse no
 # exec "pulseaudio --start"
 exec pasystray
 
-exec_always "feh --bg-fill ~/Pictures/849790.png"
+exec_always "feh --bg-fill ~/Pictures/2011260-1920x1080-Dark-Floral-Quote.jpg"
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
