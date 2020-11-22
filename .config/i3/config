@@ -116,6 +116,7 @@ focus_follows_mouse no
 # exec redshift
 # exec "pulseaudio --start"
 exec pasystray
+exec --no-startup-id "compton -b"
 
 exec_always "feh --bg-fill ~/Pictures/2011260-1920x1080-Dark-Floral-Quote.jpg"
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
