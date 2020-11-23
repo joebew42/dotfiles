@@ -113,10 +113,9 @@ new_window pixel 4
 hide_edge_borders smart
 focus_follows_mouse no
 
-# exec redshift
-# exec "pulseaudio --start"
-exec pasystray
-exec --no-startup-id "compton -b"
+exec --no-startup-id pasystray
+exec --no-startup-id compton -b
+exec --no-startup-id xrandr --output HDMI-0 --auto --right-of eDP-1-1
 
 exec_always "feh --bg-fill ~/Pictures/2011260-1920x1080-Dark-Floral-Quote.jpg"
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
