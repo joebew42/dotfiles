@@ -118,5 +118,5 @@ exec --no-startup-id compton -b
 exec --no-startup-id xrandr --output HDMI-0 --auto --right-of eDP-1-1
 
 exec_always xinput --set-prop "Logitech G403 HERO Gaming Mouse" "libinput Accel Speed" -0.5
-exec_always "feh --bg-fill ~/Pictures/2011260-1920x1080-Dark-Floral-Quote.jpg"
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
+exec_always --no-startup-id ./.config/i3/change-background.sh &
