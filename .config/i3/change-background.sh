@@ -35,15 +35,10 @@ stop() {
 
 run() {
   for wallpaper in $wallpapersDirectory; do
-    changeWallpaper $wallpaper
     changeColors $wallpaper
     sleep $timeout &
     wait $!
   done
-}
-
-changeWallpaper() {
-  feh --bg-fill $1
 }
 
 changeColors() {
