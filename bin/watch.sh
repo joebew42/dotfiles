@@ -12,12 +12,12 @@ fi
 
 command_to_run=$@
 
-hidden_files='^\./\.'
+hidden_files='^\./\.|node_modules'
 
-inotifywait -e create -e delete -e modify \
+inotifywait -e create -e delete -e close_write \
             -e moved_from -e moved_to -e attrib \
             --exclude $hidden_files \
-            -m $folder_to_watch -r -q |
+            -m $folder_to_watch -r |
   while read path action filename; do
     echo "${action} triggered on: ${path}${filename}, running ${command_to_run} ..."
     eval $command_to_run
