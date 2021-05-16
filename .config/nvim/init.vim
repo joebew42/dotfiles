@@ -58,7 +58,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'wombat'
 
-
 " Automatically remove all trailing whitespace on save
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
 autocmd BufWritePre * %s/\s\+$//e
