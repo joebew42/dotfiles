@@ -35,14 +35,14 @@ stop() {
 
 run() {
   for wallpaper in $wallpapersDirectory; do
-    changeColors $wallpaper
+    changeWallpaper $wallpaper
     sleep $timeout &
     wait $!
   done
 }
 
-changeColors() {
-   ~/.asdf/installs/python/3.9.0/bin/wal -i $1
+changeWallpaper() {
+   /usr/bin/feh --bg-fill $1
 }
 
 start
