@@ -15,7 +15,7 @@ command_to_run=$@
 hidden_files='^\./\.|node_modules'
 
 inotifywait -e create -e delete -e close_write \
-            -e moved_from -e moved_to -e attrib \
+            -e moved_from -e moved_to \
             --exclude $hidden_files \
             -m $folder_to_watch -r |
   while read path action filename; do
