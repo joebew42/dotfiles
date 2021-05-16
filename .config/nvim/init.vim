@@ -30,6 +30,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set wildignore+=*/.git/*,*/node_modules/*,*/build/*,
+
 " navigate through buffers
 nnoremap <C-j> :bprevious<CR>
 nnoremap <C-k> :bnext<CR>
@@ -42,6 +44,12 @@ nnoremap ; :GFiles<CR>
 
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
+
+" ctrlp.vim
+" ignore file in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
