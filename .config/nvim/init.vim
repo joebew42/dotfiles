@@ -17,7 +17,6 @@ call plug#end()
 " global configuration
 syntax on
 set number
-set noswapfile
 set hlsearch
 set ignorecase
 set incsearch
@@ -31,6 +30,10 @@ set shiftwidth=2
 set expandtab
 
 set wildignore+=*/.git/*,*/node_modules/*,*/build/*,
+
+set nobackup
+set nowritebackup
+set noswapfile
 
 " navigate through buffers
 nnoremap <C-j> :bprevious<CR>
