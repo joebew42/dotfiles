@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
-let g:netrw_dirhist_5='/home/joe/workspace/dotfiles/.config/fish'
-let g:netrw_dirhist_4='/home/joe/workspace/dotfiles/.config'
-let g:netrw_dirhist_3='/home/joe/workspace/dotfiles'
-let g:netrw_dirhist_2='/home/joe/workspace/dotfiles/.config/i3'
-let g:netrw_dirhist_1='/home/joe/workspace/dotfiles/.config'
