@@ -12,6 +12,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'morhetz/gruvbox'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
 " global configuration
@@ -57,6 +58,10 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'wombat'
+
+" neoclide
+" TODO
+" https://github.com/neoclide/coc.nvim#example-vim-configuration
 
 " Automatically remove all trailing whitespace on save
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
