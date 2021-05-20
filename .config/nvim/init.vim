@@ -9,7 +9,6 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -42,15 +41,14 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" navigate through buffers
-nnoremap <C-j> :bprevious<CR>
-nnoremap <C-k> :bnext<CR>
-
 " gruvbox theme
 colorscheme gruvbox
 
 " fzf
-nnoremap ; :GFiles<CR>
+nnoremap <C-p> :GFiles<CR>
+nnoremap <S-b> :Buffers<CR>
+nnoremap <S-f> :Ag<CR>
+let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -58,12 +56,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
 
-" ctrlp.vim
-" ignore file in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
 " vim-airline
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'wombat'
 
 " neoclide/coc.nvim
@@ -111,7 +104,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
+" Use Q to show documentation in preview window.
 nnoremap <silent> Q :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
