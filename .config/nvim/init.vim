@@ -52,6 +52,7 @@ let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
