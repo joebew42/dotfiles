@@ -10,7 +10,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
-  Plug 'morhetz/gruvbox'
+  Plug 'sonph/onehalf', { 'rtp': 'vim' }
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
@@ -42,13 +42,14 @@ set nowritebackup
 set noswapfile
 
 " gruvbox theme
-colorscheme gruvbox
+colorscheme onehalfdark
 
 " fzf
 nnoremap <C-p> :GFiles<CR>
 nnoremap <S-b> :Buffers<CR>
 nnoremap <S-f> :Ag<CR>
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules --ignore build -g ""'
 
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -58,7 +59,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
 
 " vim-airline
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'onehalfdark'
 
 " neoclide/coc.nvim
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
