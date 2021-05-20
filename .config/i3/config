@@ -103,11 +103,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Spacegray-ocean theme
-client.focused          #2b303b #353c47 #DCA432 #268bd2
-client.focused_inactive #2b303b #2b303b #65737e #073642
-client.unfocused        #2b303b #2b303b #65737e #073642
-client.urgent           #2b303b #bf616a #fdf6e3 #002b36
+# Onehalf Dark theme
+client.focused          #282c34 #5d677a #DCA432 #268bd2
+client.focused_inactive #282c34 #282c34 #5d677a #073642
+client.unfocused        #282c34 #282c34 #5d677a #073642
+client.urgent           #282c34 #bf616a #fdf6e3 #002b36
 
 new_window pixel 8
 hide_edge_borders smart
