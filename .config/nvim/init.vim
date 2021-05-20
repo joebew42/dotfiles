@@ -23,6 +23,7 @@ syntax on
 
 let g:mapleader=','
 
+set termguicolors
 set number
 set hlsearch
 set ignorecase
