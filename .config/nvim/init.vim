@@ -217,3 +217,9 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <A-n> :bn<CR>
 nnoremap <A-m> :bp<CR>
 
+" Moving between windows
+nnoremap <A-j> :wincmd j<CR>
+nnoremap <A-k> :wincmd k<CR>
+nnoremap <A-h> :wincmd h<CR>
+nnoremap <A-l> :wincmd l<CR>
+
