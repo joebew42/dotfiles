@@ -48,7 +48,7 @@ colorscheme onehalfdark
 
 " fzf
 nnoremap <C-p> :GFiles<CR>
-nnoremap <S-b> :Buffers<CR>
+nnoremap <A-b> :Buffers<CR>
 nnoremap <S-f> :Ag<CR>
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules --ignore build -g ""'
@@ -212,4 +212,8 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" Moving between buffers
+nnoremap <A-n> :bn<CR>
+nnoremap <A-m> :bp<CR>
 
