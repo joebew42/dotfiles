@@ -11,6 +11,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'sonph/onehalf', { 'rtp': 'vim' }
+  Plug 'chrisbra/Colorizer'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
