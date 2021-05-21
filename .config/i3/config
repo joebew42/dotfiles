@@ -104,7 +104,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Onehalf Dark theme
-client.focused          #282c34 #5d677a #DCA432 #268bd2
+client.focused          #282c34 #5d677a #282c34 #268bd2
 client.focused_inactive #282c34 #282c34 #5d677a #073642
 client.unfocused        #282c34 #282c34 #5d677a #073642
 client.urgent           #282c34 #bf616a #fdf6e3 #002b36
