@@ -31,7 +31,6 @@ set incsearch
 
 set list
 set listchars=eol:↙,tab:\ \ ⇆,trail:●,extends:…,precedes:…,space:·
-
 set autoindent
 set tabstop=2
 set shiftwidth=2
@@ -49,6 +48,7 @@ colorscheme onehalfdark
 " fzf
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-u> :GFiles?<CR>
+nnoremap <C-a> :Files<CR>
 nnoremap <A-b> :Buffers<CR>
 nnoremap <S-f> :SearchAllFiles<CR>
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
@@ -63,7 +63,8 @@ let g:rg_command = 'rg
   \ --follow
   \ --color "always" '
 
-command! -bang -nargs=* SearchAllFiles call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* SearchAllFiles
+  \ call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
