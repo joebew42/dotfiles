@@ -23,6 +23,9 @@ syntax on
 
 let g:mapleader=','
 
+set spell
+set spelllang=en_us
+
 set termguicolors
 set number
 set hlsearch
@@ -42,7 +45,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" gruvbox theme
 colorscheme onehalfdark
 
 " fzf
