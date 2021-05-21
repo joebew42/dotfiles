@@ -28,6 +28,7 @@ set spelllang=en_us
 
 set termguicolors
 set number
+set cursorline
 set hlsearch
 set ignorecase
 set incsearch
