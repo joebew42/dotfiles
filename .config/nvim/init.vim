@@ -59,7 +59,6 @@ let g:rg_command = 'rg
   \ --no-heading
   \ --fixed-strings
   \ --ignore-case
-  \ --no-ignore
   \ --hidden
   \ --follow
   \ --color "always" '
