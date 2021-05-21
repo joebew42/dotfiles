@@ -13,9 +13,14 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'sonph/onehalf', { 'rtp': 'vim' }
   Plug 'chrisbra/Colorizer'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  " JavaScript
   Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
+  " Elixir
+  Plug 'elixir-lsp/coc-elixir', { 'do': 'yarn install && yarn prepack' }
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'mhinz/vim-mix-format'
 call plug#end()
 
 " global configuration
@@ -78,6 +83,9 @@ let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
 
 " vim-airline
 let g:airline_theme = 'onehalfdark'
+
+" mhinz/vim-mix-format
+let g:mix_format_on_save = 1
 
 " neoclide/coc.nvim
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
