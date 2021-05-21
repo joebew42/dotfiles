@@ -48,10 +48,23 @@ colorscheme onehalfdark
 
 " fzf
 nnoremap <C-p> :GFiles<CR>
+nnoremap <C-u> :GFiles?<CR>
 nnoremap <A-b> :Buffers<CR>
-nnoremap <S-f> :Ag<CR>
+nnoremap <S-f> :SearchAllFiles<CR>
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules --ignore build -g ""'
+
+let g:rg_command = 'rg
+  \ --column
+  \ --line-number
+  \ --no-heading
+  \ --fixed-strings
+  \ --ignore-case
+  \ --no-ignore
+  \ --hidden
+  \ --follow
+  \ --color "always" '
+
+command! -bang -nargs=* SearchAllFiles call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
