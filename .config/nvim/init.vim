@@ -21,6 +21,9 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'elixir-lsp/coc-elixir', { 'do': 'yarn install && yarn prepack' }
   Plug 'elixir-editors/vim-elixir'
   Plug 'mhinz/vim-mix-format'
+  " Ruby/Rails
+  " Go
+  " Rust
 call plug#end()
 
 " global configuration
