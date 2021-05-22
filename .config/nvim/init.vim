@@ -91,6 +91,7 @@ let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'onehalfdark'
+let g:airline_symbols.colnr = 'C'
 
 " mhinz/vim-mix-format
 let g:mix_format_on_save = 1
