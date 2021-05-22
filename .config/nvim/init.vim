@@ -88,6 +88,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
 
 " vim-airline
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'onehalfdark'
 
 " mhinz/vim-mix-format
