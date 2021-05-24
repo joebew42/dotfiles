@@ -7,13 +7,13 @@ set --global fzf_search_vars_cmd '__fzf_search_shell_variables (set --show | psu
 # Set up the default, mnemonic key bindings unless the user has chosen to customize them
 if not set --query fzf_fish_custom_keybindings
     # \cp is Ctrl+p
-    bind \cp 'fzf; commandline -f repaint'
+    bind \cp __fzf_search_current_dir
     bind \cr __fzf_search_history
     bind \cv $fzf_search_vars_cmd
 
     # set up the same key bindings for insert mode if using fish_vi_key_bindings
     if test "$fish_key_bindings" = fish_vi_key_bindings -o "$fish_key_bindings" = fish_hybrid_key_bindings
-        bind --mode insert \cp 'fzf; commandline -f repaint'
+        bind --mode insert \cp __fzf_search_current_dir
         bind --mode insert \cr __fzf_search_history
         bind --mode insert \cv $fzf_search_vars_cmd
     end

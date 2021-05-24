@@ -16,6 +16,7 @@ set -gx FZF_DEFAULT_OPTS "
 --preview 'bash -c \"([[ -f {} ]] && (batcat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200\"'
 --bind '?:toggle-preview'
 --bind 'ctrl-a:select-all'
---bind 'ctrl-e:execute(vim {+})'
 "
+
+set fzf_fd_opts --hidden --exclude=.git
 
