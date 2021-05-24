@@ -5,7 +5,7 @@ alias bat="batcat"
 
 set -gx EDITOR "/usr/bin/vim"
 
-set -gx FZF_DEFAULT_COMMAND "rg --files --hidden"
+set -gx FZF_DEFAULT_COMMAND "fd --hidden --exclude=.git"
 set -gx FZF_DEFAULT_OPTS "
 --layout=reverse
 --info=inline
