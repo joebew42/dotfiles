@@ -1,8 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR EDITOR:/usr/bin/vim
-SETUVAR FZF_DEFAULT_COMMAND:rg\x20\x2d\x2dfiles\x20\x2d\x2dhidden
-SETUVAR FZF_DEFAULT_OPTS:
 SETUVAR __fish_initialized:3100
 SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/home/joe/\x2econfig/fish/functions/__fzf_extract_var_info\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_preview_file\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_report_file_type\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_search_current_dir\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_search_git_log\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_search_git_status\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_search_history\x2efish\x1e/home/joe/\x2econfig/fish/functions/__fzf_search_shell_variables\x2efish\x1e/home/joe/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/joe/\x2econfig/fish/functions/fisher\x2efish\x1e/home/joe/\x2econfig/fish/completions/fisher\x2efish

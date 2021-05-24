@@ -65,7 +65,6 @@ nnoremap <C-u> :GFiles?<CR>
 nnoremap <C-a> :Files<CR>
 nnoremap <A-b> :Buffers<CR>
 nnoremap <S-f> :SearchAllFiles<CR>
-let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
 let g:rg_command = 'rg
   \ --column
