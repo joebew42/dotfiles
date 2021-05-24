@@ -1,4 +1,4 @@
 source ~/.asdf/asdf.fish
 
-set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden'
+set -U FZF_DEFAULT_COMMAND 'rg --files --hidden'
 
