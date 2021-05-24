@@ -12,5 +12,7 @@ fzf
 kitty
 feh
 ripgrep
+fd-find
+bat
 fonts-firacode
 fonts-powerline
