@@ -253,7 +253,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Moving between buffers
 nnoremap <A-n> :bn<CR>
 nnoremap <A-m> :bp<CR>
-nnoremap <C-w> :bd<CR>
+nnoremap <A-w> :bd<CR>
 
 " Moving between windows
 nnoremap <A-j> :wincmd j<CR>
