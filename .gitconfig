@@ -1,12 +1,12 @@
 [user]
-	email = joebew42@gmail.com
-	name = Joe Bew
+  email = joebew42@gmail.com
+  name = Joe Bew
 [alias]
-	s = status --short
-        d = diff
-        dc = diff --cached
-        a = add .
-        cm = commit -m
-        pr = pull --rebase
+  s = status --short
+  d = diff
+  dc = diff --cached
+  a = add .
+  cm = commit -m
+  pr = pull --rebase
 [core]
-	editor = vim
+  editor = vim
