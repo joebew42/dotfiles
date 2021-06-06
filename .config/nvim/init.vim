@@ -3,6 +3,7 @@
 " for more details.
 call plug#begin(stdpath('data') . '/plugged')
   Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
