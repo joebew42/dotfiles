@@ -9,7 +9,7 @@ timeout=$((30 * 60))
 
 check_if_already_running() {
   if [ -e $PIDFILE ]; then
-    if kill -0 &>1 > /dev/null `cat $PIDFILE`; then
+    if kill -0 &>&1 > /dev/null `cat $PIDFILE`; then
         echo "Already running"
         exit 1
     else
