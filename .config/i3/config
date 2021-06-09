@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Fira Code 12
+font pango:Fira Code Regular Nerd Font Complete 12
 
 floating_modifier $mod
 
@@ -12,7 +12,7 @@ bindsym $mod+Return exec kitty
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+space exec "rofi -combi-modi window,drun,ssh -font 'Fira Code 14' -show combi -show-icons"
+bindsym $mod+space exec "rofi -combi-modi window,drun,ssh -font 'Fira Code Regular Nerd Font Complete 14' -show combi -show-icons"
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
