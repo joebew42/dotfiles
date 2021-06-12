@@ -31,7 +31,7 @@ call plug#begin(stdpath('data') . '/plugged')
   " Rust
 call plug#end()
 
-" global configuration
+" Global configuration
 syntax on
 
 let g:mapleader=','
@@ -47,7 +47,7 @@ set ignorecase
 set incsearch
 
 set list
-set listchars=eol:↙,tab:\ \ ⇆,trail:●,extends:…,precedes:…,space:·
+set listchars=eol:↙,tab:\ \ ⇆,trail:●,extends:…,precedes:…
 set autoindent
 set tabstop=2
 set shiftwidth=2
