@@ -3,9 +3,13 @@
 " for more details.
 call plug#begin(stdpath('data') . '/plugged')
   Plug 'preservim/nerdtree'
+  Plug 'preservim/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-endwise'
   Plug 'airblade/vim-gitgutter'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -33,6 +37,8 @@ call plug#end()
 
 " Global configuration
 syntax on
+
+filetype plugin on
 
 let g:mapleader=','
 
