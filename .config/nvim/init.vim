@@ -17,7 +17,8 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'sonph/onehalf', { 'rtp': 'vim' }
   Plug 'chrisbra/Colorizer'
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'dense-analysis/ale' " Linting & Fixing
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' } " VSCode Extensions
 
   " JavaScript
   Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
@@ -30,7 +31,9 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'mhinz/vim-mix-format'
 
   " Python
-
+  Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Syntax Highlighting
+  Plug 'Vimjas/vim-python-pep8-indent' " PEP8 Indentation
+  Plug 'fannheyward/coc-pyright', { 'do': 'yarn install --frozen-lockfile' }
 
   " Ruby/Rails
   " Go
@@ -108,6 +111,18 @@ let g:airline_symbols.colnr = 'C'
 
 " mhinz/vim-mix-format
 let g:mix_format_on_save = 1
+
+
+" ALE
+let g:ale_linters = {
+      \   'python': ['flake8', 'pylint'],
+      \}
+
+let g:ale_fixers = {
+      \    'python': ['yapf'],
+      \}
+
+let g:ale_fix_on_save = 1
 
 " neoclide/coc.nvim
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
