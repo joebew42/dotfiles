@@ -129,6 +129,10 @@ let g:ale_fixers = {
 
 let g:ale_fix_on_save = 1
 
+" Navigate between errors quickly
+nmap <silent> <C-h> <Plug>(ale_previous_wrap)
+nmap <silent> <C-l> <Plug>(ale_next_wrap)
+
 " neoclide/coc.nvim
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 set hidden
