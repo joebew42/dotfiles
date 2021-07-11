@@ -1,3 +1,7 @@
+" Disable LSP features in ALE that are
+" already provided by coc.nvim
+let g:ale_disable_lsp = 1
+
 " Plugins
 " see https://github.com/junegunn/vim-plug
 " for more details.
