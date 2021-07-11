@@ -115,7 +115,7 @@ let g:mix_format_on_save = 1
 
 " ALE
 let g:ale_linters = {
-      \   'python': ['flake8', 'pylint'],
+      \    'python': ['flake8', 'pylint'],
       \}
 
 let g:ale_fixers = {
