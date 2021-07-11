@@ -124,6 +124,7 @@ let g:ale_linters = {
       \}
 
 let g:ale_fixers = {
+      \    '*': ['remove_trailing_lines', 'trim_whitespace'],
       \    'python': ['yapf'],
       \}
 
@@ -265,10 +266,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " end of neoclide/coc.nvim
 
-" Automatically remove all trailing whitespace on save
-" https://vim.fandom.com/wiki/Remove_unwanted_spaces
-autocmd BufWritePre * %s/\s\+$//e
-
 " Moving lines up or down
 " https://vim.fandom.com/wiki/Moving_lines_up_or_down
 nnoremap <C-j> :m .+1<CR>==
@@ -301,4 +298,3 @@ nnoremap <A-j> :wincmd j<CR>
 nnoremap <A-k> :wincmd k<CR>
 nnoremap <A-h> :wincmd h<CR>
 nnoremap <A-l> :wincmd l<CR>
-
