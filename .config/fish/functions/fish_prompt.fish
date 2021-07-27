@@ -1,21 +1,25 @@
 function fish_prompt
   set laststatus $status
+  function _truncate
+    set word_to_truncate $argv[1]
+    if [ (string length $word_to_truncate) -gt 12 ]
+      echo -n (echo $word_to_truncate | cut -c -12)...
+    else
+      echo -n $word_to_truncate
+    end
+  end
   function _pwd
     set realhome ~
     if [ $realhome = $PWD ]
       echo -n (set_color green)\u2302' '
     else
-      echo -n (basename $PWD)' '
+      echo -n (_truncate (basename $PWD)' ')
     end
   end
   function _git_branch_name
     set branch_name (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
     test $branch_name
-    and if [ (string length $branch_name) -gt 12 ]
-       echo -n (set_color yellow)(echo $branch_name | cut -c -12)...
-    else
-       echo -n (set_color yellow)$branch_name
-    end
+    and echo -n (set_color yellow)(_truncate $branch_name)
   end
   function _git_is_dirty
     echo -n (git status -s --ignore-submodules=dirty ^/dev/null)
