@@ -289,8 +289,8 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 " Moving between buffers
-nnoremap <A-m> :bn<CR>
-nnoremap <A-n> :bp<CR>
+nnoremap <A-m> :bp<CR>
+nnoremap <A-n> :bn<CR>
 nnoremap <A-w> :bd<CR>
 
 " Moving between windows
