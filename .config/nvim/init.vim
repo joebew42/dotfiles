@@ -76,6 +76,9 @@ set noswapfile
 
 colorscheme onehalfdark
 
+" Disable spell check in terminal
+autocmd TermOpen * setlocal nospell
+
 " fzf
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-u> :GFiles?<CR>
