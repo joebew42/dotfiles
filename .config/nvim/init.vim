@@ -88,6 +88,7 @@ augroup END
 augroup ctags
   autocmd!
   autocmd BufWritePost *.js silent !ctags -R
+  autocmd BufWritePost *.py silent !ctags -R
 augroup END
 
 " fzf
