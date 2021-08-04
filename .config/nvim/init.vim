@@ -77,7 +77,10 @@ set noswapfile
 colorscheme onehalfdark
 
 " Disable spell check in terminal
-autocmd TermOpen * setlocal nospell
+augroup term_open
+  autocmd!
+  autocmd TermOpen * setlocal nospell
+augroup END
 
 " Ctags
 " TODO set autocmd to update the tags index when a buffer is saved
@@ -194,8 +197,11 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup cursor_hold
+  autocmd!
+  " Highlight the symbol and its references when holding the cursor.
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup END
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -204,13 +210,13 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-augroup mygroup
+augroup filetype_typescript_json
   autocmd!
   " Setup formatexpr specified filetype(s).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
+augroup END
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
