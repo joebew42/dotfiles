@@ -20,7 +20,8 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'wincent/ferret'
   Plug 'vim-airline/vim-airline'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
-  Plug 'sonph/onehalf', { 'rtp': 'vim' }
+  Plug 'joshdick/onedark.vim'
+  Plug 'sheerun/vim-polyglot' " Syntax Highlighting
   Plug 'chrisbra/Colorizer'
   Plug 'dense-analysis/ale' " Linting & Fixing
   Plug 'neoclide/coc.nvim', { 'branch': 'release' } " VSCode Extensions
@@ -75,7 +76,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-colorscheme onehalfdark
+colorscheme onedark
 
 " Disable spell check in terminal
 augroup term_open
@@ -111,7 +112,7 @@ let g:NERDTreeIgnore = ['.git[[dir]]','node_modules[[dir]]','build[[dir]]']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
-let g:airline_theme = 'onehalfdark'
+let g:airline_theme = 'onedark'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
