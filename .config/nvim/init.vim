@@ -17,6 +17,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'wincent/ferret'
   Plug 'vim-airline/vim-airline'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'sonph/onehalf', { 'rtp': 'vim' }
