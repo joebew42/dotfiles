@@ -79,12 +79,16 @@ colorscheme onehalfdark
 " Disable spell check in terminal
 autocmd TermOpen * setlocal nospell
 
+" Ctags
+" TODO set autocmd to update the tags index when a buffer is saved
+
 " fzf
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-u> :GFiles?<CR>
 nnoremap <C-a> :Files<CR>
-nnoremap <A-b> :Buffers<CR>
+nnoremap <C-b> :Buffers<CR>
 nnoremap <S-f> :SearchAllFiles<CR>
+nnoremap <C-t> :Tags<CR>
 
 let g:rg_command = 'rg
   \ --column
@@ -100,7 +104,7 @@ command! -bang -nargs=* SearchAllFiles
   \ call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 " NERDTree
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -228,16 +232,6 @@ xmap ic <Plug>(coc-classobj-i)
 omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
-
-" Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
