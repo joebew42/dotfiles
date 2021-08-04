@@ -83,7 +83,12 @@ augroup term_open
 augroup END
 
 " Ctags
-" TODO set autocmd to update the tags index when a buffer is saved
+" Update tags index file on buffer save
+" Check ~/.ctags to define your custom rules
+augroup ctags
+  autocmd!
+  autocmd BufWritePost *.js silent !ctags -R
+augroup END
 
 " fzf
 nnoremap <C-p> :GFiles<CR>
