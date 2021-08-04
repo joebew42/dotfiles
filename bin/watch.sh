@@ -12,11 +12,11 @@ fi
 
 command_to_run=$@
 
-hidden_files='^\./\.|node_modules'
+exclude_files='^\./\.|node_modules|tags'
 
 inotifywait -e create -e delete -e close_write \
             -e moved_from -e moved_to \
-            --exclude $hidden_files \
+            --exclude $exclude_files \
             -m $folder_to_watch -r |
   while read path action filename; do
     echo "${action} triggered on: ${path}${filename}, running ${command_to_run} ..."
