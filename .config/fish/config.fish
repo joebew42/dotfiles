@@ -20,4 +20,3 @@ set -gx FZF_DEFAULT_OPTS "
 
 set fzf_fd_opts --hidden --exclude=.git
 set fzf_preview_dir_cmd exa --all --color=always
-
