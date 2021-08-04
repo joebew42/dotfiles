@@ -95,21 +95,8 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <C-u> :GFiles?<CR>
 nnoremap <C-a> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
-nnoremap <S-f> :SearchAllFiles<CR>
+nnoremap <S-f> :Rg<CR>
 nnoremap <C-t> :Tags<CR>
-
-let g:rg_command = 'rg
-  \ --column
-  \ --line-number
-  \ --no-heading
-  \ --fixed-strings
-  \ --ignore-case
-  \ --hidden
-  \ --follow
-  \ --color "always" '
-
-command! -bang -nargs=* SearchAllFiles
-  \ call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 " NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
