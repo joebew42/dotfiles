@@ -14,20 +14,10 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+space exec "rofi -modi window,run,ssh,combi -combi-modi window,drun,ssh -font 'FiraCode Nerd Font 14' -show combi -show-icons"
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ograve focus right
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ograve move right
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
