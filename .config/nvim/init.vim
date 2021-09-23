@@ -95,7 +95,7 @@ augroup END
 
 " fzf
 nnoremap <C-p> :GFiles<CR>
-nnoremap <C-u> :GFiles?<CR>
+nnoremap <C-x> :GFiles?<CR>
 nnoremap <C-a> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <S-f> :Rg<CR>
