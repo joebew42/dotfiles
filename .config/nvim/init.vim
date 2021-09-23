@@ -102,7 +102,7 @@ nnoremap <S-f> :Rg<CR>
 nnoremap <C-t> :Tags<CR>
 
 " NERDTree
-nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-q> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
