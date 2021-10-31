@@ -12,7 +12,7 @@ fi
 
 command_to_run=$@
 
-exclude_files='^\./\.|node_modules|tags'
+exclude_files='^\./\.|node_modules|tags|coverage'
 
 inotifywait -e create -e delete -e close_write \
             -e moved_from -e moved_to \
