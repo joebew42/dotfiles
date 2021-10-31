@@ -30,6 +30,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
+  Plug 'ruanyl/coc-coverage', { 'do': 'yarn install --froze-lockfile' }
 
   " Elixir
   Plug 'elixir-lsp/coc-elixir', { 'do': 'yarn install && yarn prepack' }
