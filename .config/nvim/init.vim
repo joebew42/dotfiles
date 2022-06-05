@@ -26,6 +26,9 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'dense-analysis/ale' " Linting & Fixing
   Plug 'neoclide/coc.nvim', { 'branch': 'release' } " VSCode Extensions
 
+  " Hex editor
+  Plug 'rootkiter/vim-hexedit'
+
   " JavaScript
   Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
