@@ -17,12 +17,13 @@ function fish_prompt
     end
   end
   function _git_branch_name
-    set branch_name (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-    test $branch_name
-    and echo -n (set_color yellow)(_truncate $branch_name)
+    if test -d .git
+      set branch_name (git branch --show-current)
+      and echo -n (set_color yellow)(_truncate $branch_name)
+    end
   end
   function _git_is_dirty
-    echo -n (git status -s --ignore-submodules=dirty ^/dev/null)
+    echo -n (git status -s --ignore-submodules=dirty)
   end
   function _git_status
     if [ (_git_is_dirty) ]
