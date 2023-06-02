@@ -57,8 +57,10 @@ filetype plugin on
 
 let g:mapleader=','
 
-set spell
+set nospell
 set spelllang=en_us
+
+set nowrap
 
 set termguicolors
 set number
