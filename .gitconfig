@@ -10,3 +10,5 @@
   pr = pull --rebase
 [core]
   editor = vim
+[init]
+	defaultBranch = main
